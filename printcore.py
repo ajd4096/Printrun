@@ -120,7 +120,7 @@ class printcore():
                     print "RECV: ",line.rstrip()
             if(line.startswith('DEBUG_')):
                 continue
-            if(line.startswith(tuple(self.greetings)) or line.startswith('ok')):
+            if(line.startswith(tuple(self.greetings)) or line.startswith('ok') or line.startswith('echo:'):
                 self.clear=True
             if(line.startswith(tuple(self.greetings)) or line.startswith('ok') or "T:" in line):
                 if (not self.online or line.startswith(tuple(self.greetings))) and self.onlinecb is not None:
